@@ -1,0 +1,59 @@
+.page{
+    display: grid;
+    /* Grid structure*/
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 8px 1fr 70px;
+
+    /* Name Grid Areas */
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+
+    min-height: 100vh;
+    gap: 16px;
+    padding: 15px;
+
+    background-color: bisque;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+
+.site-header,
+.sidebar,
+.main-content,
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    font-size: 28px;
+    font-weight: bold;
+    color: brown;
+
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(red, green, blue);
+}
+
+
+.site-header{
+    grid-area: header;
+    background-color: aquamarine;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: burlywood;
+}
+
+.main-content{
+    grid-area: main;
+    background-color: azure;
+}
+
+.site-footer{
+    grid-area: footer;
+    background-color: aqua;
+}
