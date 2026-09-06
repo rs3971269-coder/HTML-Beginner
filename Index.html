@@ -1,50 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>my first page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js folder/practice.js" defer></script>
 </head>
-<body>
+<body id="body">
+    <header class="site-header">
+        <div>   
+            <p class="eyebrow">FRONTEND DEVELOPER</p>
+            <h1>My Website</h1>
+        </div>
+        <nav aria-label="Main navigation"> <!--nav element is used to define a section of navigation links. The aria-label attribute provides an accessible name for the navigation region, which is helpful for screen readers and other assistive technologies.-->
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <div class="intro-section">
-        <h1>Welcome to my first page</h1>
-        <h4>About Me</h4>
-        <p>
-            I am a frontend <span class="highlight">developer</span> who loves building things!! lets rock
-        </p>
-    </div>
+    <main>
+        <section class="hero-section" id="home">
+            <div class="intro-section">
+                <p class="eyebrow">WELCOME</p>
+                <h2>Building clear and useful web experiences.</h2>
+                <p>Hello, I am a <span class="highlight">frontend developer</span> passionate about creating amazing user experiences.</p>
+                <a class="primary-link" href="#contact">Work with me</a>
+            </div>
 
-    <div class="links-section">
-        <h2>Absolute URLs</h2>
-        <p>
-            <a href="https://www.google.com">Google</a>
-        </p>
-        <p>
-            <a href="https://www.github.com">GitHub</a>
-        </p>
-    </div>
+            <div class="image-section">
+                <img src="images.jpg" alt="Creative workspace">
+            </div>
+        </section>
 
-    <div class="image-section">
-        <p>
-            <img src = "images.jpg" alt="Know">
-        </p>
-    </div>
+        <section class="about-section" id="about">
+            <article>
+                <p class="eyebrow">ABOUT ME</p>
+                <h2>Learning, building, and improving every day.</h2>
+                <p>I love turning ideas into simple, accessible interfaces with HTML and CSS.</p>
+            </article>
 
-    <!-- New: Sign Up Form -->
-    <div class="form-section">
-        <h2>Sign Up</h2>
-        <form action="/submit" method="post">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Enter your full name" required><br>
+            <aside class="links-section">
+                <h3>Find me online</h3>
+                <a href="https://www.github.com" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.google.com" target="_blank" rel="noreferrer">Google</a>
+            </aside>
+        </section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="name@example.com" required><br>
+        <section class="form-section" id="contact">
+            <p class="eyebrow">CONTACT</p>
+            <h2>Let us connect</h2>
+            <form action="submit" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" required><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <button type="submit">Sign Up</button>
-        </form>
-    </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="India">India</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="msg" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Send message</button>
+                <p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2026 My Website</p>
+    </footer>
 
 </body>
 </html>
